@@ -1,0 +1,97 @@
+# login endpoint: server path/user_auth/rest-auth/login/
+
+	request type: post
+
+	request:
+	{
+    		"username": "",
+    		"email": "",
+    		"password": ""
+	}
+
+	response:
+	{
+    		"key" : "token"
+	}
+
+
+#logout endpoint: server path/user_auth/rest-auth/logout/
+	request type: post
+
+	response:
+	{"detail": "Successfully logged out."}
+
+
+# registration endpoint: server path /user_auth/rest-auth/registration/
+	request type: post
+	request:
+	{
+   		"username": "",
+    		"email": "",
+    		"password1": "",
+    		"password2": ""
+	}
+
+
+# facebook log in endpoint: serverpath /user_auth/rest-auth/facebook/
+	request type: post
+	request:
+	{
+    	 	"access_token": "",
+    		"code": ""
+	}
+        
+
+
+#search availability for  Drugs endpoint: server path/select_drugs/searchDrug/
+
+	request type: post
+
+	request:
+	{
+  		"searchedDrugName" : "",
+   		"searchedDrugType" : "",
+   		"searchedDrugQuantity" : ""
+	}
+
+	response: 	
+	{
+    		"availability" : "",
+     		"quantity": ""
+		"per_unit price": ""
+	}
+
+         
+# puchase drugs endpoint: server path//purchase_drugs/purchase/
+
+	request type: post
+
+	request:
+	{
+    		"customer_mobile_no": "",
+    		"customer_address": "",
+    		"drugs": [
+       			 {
+           		 "drug_name": "",
+           		 "drug_type" : "",
+	   		 "purchase_quantity": 
+        		}, 
+			{
+          		 "drug_name": "",
+            		"drug_type" : "",
+	    		"purchase_quantity": 
+       			 },
+			................
+			...............
+			............... 
+			{
+          		 "drug_name": "",
+            		"drug_type" : "",
+	    		"purchase_quantity": 
+       			 }
+    			]
+	}
+
+	response: {"totalPrice": }
+
+

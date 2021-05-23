@@ -1,0 +1,42 @@
+{% extends 'base.html'%}
+
+
+{% block title %} search result {% endblock %}
+
+{% block content %}
+<div class=" container-fluid ">
+        <div  class= bg-primary>
+                <div class="row">
+                    <div class="col-md-4">
+
+                    </div>
+                    <div class="col-md-6">
+                        <h1>Welcome to pahrmacy app</h1>
+                    </div>
+                    <div class="col-md-2">
+                        <button><a href="{% url 'log_out' %}">log out</a></button>
+                        <button><a href="{% url 'search_drug' %} ">search again</a></button>
+
+                    </div>
+
+                   </div>
+            </div>
+
+            <br>
+            <br>
+            <br>
+            <h1 class="text-center">search result</h1>
+            <br>
+            <br>
+
+            <h1> Availability: {{data.availability }}</h1>
+            <h1>Quantity: {{data.quantity }} </h1>
+            <h1>Per Unit Price: {{data.per_unit_price}}</h1>
+
+            <button> <a href="{% url 'save' %}"> Add to cart</a> </button>
+
+        </div>
+
+
+
+{% endblock %}

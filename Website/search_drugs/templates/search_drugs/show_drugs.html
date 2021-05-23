@@ -1,0 +1,49 @@
+{% extends 'base.html'%}
+
+
+{% block title %} show drugs {% endblock %}
+
+{% block content %}
+
+<div class=" container-fluid ">
+    <div class=bg-primary>
+        <div class="row">
+            <div class="col-md-4">
+
+            </div>
+            <div class="col-md-6">
+                <h1>Easy Pharma</h1>
+            </div>
+            <div class="col-md-2">
+                <button><a href="{% url 'log_out' %}">log out</a></button>
+                <button><a href="{% url 'search_drug' %}">search again</a></button>
+
+            </div>
+
+        </div>
+    </div>
+
+    <br>
+    <br>
+    <br>
+    <h1 class="text-center">selelcted drugs</h1>
+    <br>
+    <br>
+
+    <ul>
+        {% for drug in drug_list %}
+        <li><h3>name: {{drug.drug}}, type: {{drug.type}} , quantity: {{drug.quantity}}, price_per_unit : {{drug.price}}</h3>
+            <button><a href="{% url 'remove_drugs' drug.idx %}">remove</a></button>
+        </li>
+        {% endfor %}
+    </ul>
+
+    <br>
+    <br>
+    <br>
+
+    <button><a href="{% url 'user_info' %}">purchase</a></button>
+
+
+</div>
+{% endblock %}

@@ -1,0 +1,39 @@
+{% extends 'base.html'%}
+
+
+{% block title %} purchase {% endblock %}
+
+{% block content %}
+
+
+
+<div class=" container-fluid ">
+            <div  class= bg-primary>
+                    <div class="row">
+                        <div class="col-md-4">
+
+                        </div>
+                        <div class="col-md-6">
+                            <h1>Easy Pharma</h1>
+                        </div>
+                        <div class="col-md-2">
+                            <button><a href="{%url 'log_out' %}">log out</a></button>
+                            <button><a href="{%url 'log_out' %}">search again</a></button>
+
+                        </div>
+
+                       </div>
+                </div>
+
+                <br>
+                <br>
+                <br>
+                <h1 class="text-center">{{data}} </h1>
+                <br>
+                <br>
+
+
+
+
+
+{% endblock %}

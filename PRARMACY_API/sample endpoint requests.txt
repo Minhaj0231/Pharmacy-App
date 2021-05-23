@@ -1,0 +1,26 @@
+#search drug endpoint:
+{ "searchedDrugName" : "ace_30ml",
+  "searchedDrugType" : "syrup",
+  "searchedDrugQuantity" : "5"
+
+}
+
+
+purchase drug end point:
+{
+    "customer_mobile_no": "0123456",
+    "customer_address": "uttara dhaka",
+    "drugs": [
+        {
+            "drug_name": "ace_30ml",
+            "drug_type" : "syrup",
+	    "purchase_quantity": 5
+        }, 
+	{
+           "drug_name": "napa_250mg",
+            "drug_type" : "tablet",
+	    "purchase_quantity": 10
+        } 
+    ]
+}
+

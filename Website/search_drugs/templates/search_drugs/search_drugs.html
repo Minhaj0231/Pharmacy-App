@@ -1,0 +1,64 @@
+{% extends 'base.html'%}
+
+
+{% block title %} search drugs {% endblock %}
+
+{% block content %}
+
+
+        <div class=" container-fluid ">
+            <div  class= bg-primary>
+                    <div class="row">
+                        <div class="col-md-4">
+
+                        </div>
+                        <div class="col-md-6">
+                            <h1>Easy Pharma</h1>
+                        </div>
+                        <div class="col-md-2">
+                            <button><a href="{% url 'log_out' %}">log out</a></button>
+                             <button><a href="{% url 'show_drugs' %}">show cart</a></button>
+                        </div>
+
+                       </div>
+                </div>
+
+                <br>
+                <br>
+                <br>
+                <h1 class="text-center">search drugs</h1>
+                <br>
+                <br>
+
+
+
+                <div >
+                        <form action="{% url 'search_details' %}" method="POST" >
+                            {% csrf_token %}
+                                <div class="form-group">
+                                  <label for="drug_name">Drug Name</label>
+                                  <input type="text" class="form-control" id="drug_name"  placeholder="Enter drug name" required= 'required' name="drug_name">
+                                </div>
+                                <div class="form-group">
+                                    <label for="drug_type">Drug Type</label>
+                                    <input type="text" class="form-control" id="drug_type"  placeholder="Enter drug type" required= 'required' name="drug_type">
+                                  </div>
+                                <div class="form-group">
+                                  <label for="drug_quantity">Drug Quantity</label>
+                                  <input type="number" class="form-control" id="drug_quantity" placeholder="Enter quantity" required ='required' name="drug_quantity">
+                                </div>
+
+                                <button type="submit" class="btn btn-primary">Search</button>
+                              </form>
+                </div>
+
+
+
+
+
+
+
+       </div>
+
+
+{% endblock %}
